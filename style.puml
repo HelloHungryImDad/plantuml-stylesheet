@@ -1,23 +1,21 @@
 @startuml
-!define COLOR_BLACK #000000
-!define COLOR_WHITE #ffffff
-!define COLOR_ITP_DARK_BLUE #000000
-!define COLOR_ITP_YELLOW #ffffff
+!$darkMode ?= 0
+!if ($darkMode == 1)
+!define COLOR_DEFAULT_BORDER White
+skinparam defaultFontColor White
+!else
+!define COLOR_DEFAULT_BORDER Black
+skinparam defaultFontColor Black
+!endif
 !define COLOR_DEFAULT_BACKGROUND transparent
-!define COLOR_DEFAULT_TEXT Black
-
-!define FONT_FIRA_MONO Fira Mono
-!define FONT_FIRA_CODE Fira Code
-!define FONT_FIRA_SANS Fira Sans
-
+!define FONT_DEFAULT SansSerif
 skinparam backgroundcolor transparent
 
-skinparam defaultFontColor COLOR_DEFAULT_TEXT
-skinparam defaultFontName FONT_FIRA_MONO
+skinparam defaultFontName FONT_DEFAULT
 skinparam defaultFontSize 14
 skinParam defaultFontStyle plain
 
-skinparam dpi 90
+skinparam dpi 96
 
 'Controls how lines are drawn in PlantUML
 'values: otho, polyline, splines (default)
@@ -27,7 +25,7 @@ skinparam linetype ortho
 'skinparam nodesep 30
 
 'Controls the padding surrounding text
-'skinparam padding 10
+skinparam padding 6
 
 'Distance between elements (horizontally, default: 30)
 'skinparam ranksep 30
@@ -36,196 +34,194 @@ skinparam linetype ortho
 'skinparam SameClassWidth true
 
 'Uncomment line below to disable shadows
-'skinparam Shadowing false
+skinparam Shadowing false
 
 skinparam activity {
   BackgroundColor COLOR_DEFAULT_BACKGROUND
-  BorderColor COLOR_ITP_DARK_BLUE
+  BorderColor COLOR_DEFAULT_BORDER
   DiamondBackgroundColor COLOR_DEFAULT_BACKGROUND
-  DiamondBorderColor COLOR_ITP_DARK_BLUE
+  DiamondBorderColor COLOR_DEFAULT_BORDER
 }
 
 skinparam actor {
-  BackgroundColor COLOR_WHITE
-  BorderColor COLOR_ITP_DARK_BLUE
+  BackgroundColor COLOR_DEFAULT_BACKGROUND
+  BorderColor COLOR_DEFAULT_BORDER
 }
 
 skinparam agent {
   BackgroundColor COLOR_DEFAULT_BACKGROUND
-  BorderColor COLOR_ITP_DARK_BLUE
+  BorderColor COLOR_DEFAULT_BORDER
 }
 
 skinparam arrow {
-  Color COLOR_ITP_DARK_BLUE
+  Color COLOR_DEFAULT_BORDER
   FontColor COLOR_DEFAULT_TEXT
 }
 
 skinparam artifact {
   BackgroundColor COLOR_DEFAULT_BACKGROUND
-  BorderColor COLOR_ITP_DARK_BLUE
+  BorderColor COLOR_DEFAULT_BORDER
 }
 
 skinparam biddable {
   BackgroundColor COLOR_DEFAULT_BACKGROUND
-  BorderColor COLOR_ITP_DARK_BLUE
+  BorderColor COLOR_DEFAULT_BORDER
 }
 
 skinparam boundary {
   BackgroundColor COLOR_DEFAULT_BACKGROUND
-  BorderColor COLOR_ITP_DARK_BLUE
+  BorderColor COLOR_DEFAULT_BORDER
 }
 
 skinparam card {
   BackgroundColor COLOR_DEFAULT_BACKGROUND
-  BorderColor COLOR_ITP_DARK_BLUE
+  BorderColor COLOR_DEFAULT_BORDER
 }
 
 skinparam class {
   BackgroundColor COLOR_DEFAULT_BACKGROUND
-  BorderColor COLOR_ITP_DARK_BLUE
+  BorderColor COLOR_DEFAULT_BORDER
   FontStyle bold
   HeaderBackgroundColor COLOR_DEFAULT_BACKGROUND
 }
 
 skinparam cloud {
-  BackgroundColor COLOR_WHITE
-  BorderColor COLOR_ITP_DARK_BLUE
+  BackgroundColor COLOR_DEFAULT_BACKGROUND
+  BorderColor COLOR_DEFAULT_BORDER
 }
 
 skinparam collections {
-  BackgroundColor COLOR_WHITE
-  BorderColor COLOR_ITP_DARK_BLUE
+  BackgroundColor COLOR_DEFAULT_BACKGROUND
+  BorderColor COLOR_DEFAULT_BORDER
 }
 
 skinparam component {
   BackgroundColor COLOR_DEFAULT_BACKGROUND
-  BorderColor COLOR_ITP_DARK_BLUE
+  BorderColor COLOR_DEFAULT_BORDER
   Style uml2  
 }
 
 skinparam control {
   BackgroundColor COLOR_DEFAULT_BACKGROUND
-  BorderColor COLOR_ITP_DARK_BLUE
+  BorderColor COLOR_DEFAULT_BORDER
 }
 
 skinparam database {
   BackgroundColor COLOR_DEFAULT_BACKGROUND
-  BorderColor COLOR_ITP_DARK_BLUE
+  BorderColor COLOR_DEFAULT_BORDER
 }
 
 skinparam designed {
   BackgroundColor COLOR_DEFAULT_BACKGROUND
-  BorderColor COLOR_ITP_DARK_BLUE
+  BorderColor COLOR_DEFAULT_BORDER
 }
 
 skinparam domain {
   BackgroundColor COLOR_DEFAULT_BACKGROUND
-  BorderColor COLOR_ITP_DARK_BLUE
+  BorderColor COLOR_DEFAULT_BORDER
 }
 
 skinparam entity {
   BackgroundColor COLOR_DEFAULT_BACKGROUND
-  BorderColor COLOR_ITP_DARK_BLUE
+  BorderColor COLOR_DEFAULT_BORDER
 }
 
 skinparam file {
   BackgroundColor COLOR_DEFAULT_BACKGROUND
-  BorderColor COLOR_ITP_DARK_BLUE
+  BorderColor COLOR_DEFAULT_BORDER
 }
 
 skinparam folder {
-  BackgroundColor COLOR_WHITE
-  BorderColor COLOR_ITP_DARK_BLUE
+  BackgroundColor COLOR_DEFAULT_BACKGROUND
+  BorderColor COLOR_DEFAULT_BORDER
 }
 
 skinparam frame {
-  BackgroundColor COLOR_WHITE
-  BorderColor COLOR_ITP_DARK_BLUE
+  BackgroundColor COLOR_DEFAULT_BACKGROUND
+  BorderColor COLOR_DEFAULT_BORDER
 }
 
 skinparam interface {
   BackgroundColor COLOR_DEFAULT_BACKGROUND
-  BorderColor COLOR_ITP_DARK_BLUE
+  BorderColor COLOR_DEFAULT_BORDER
 }
 
 skinparam object {
   BackgroundColor COLOR_DEFAULT_BACKGROUND
-  BorderColor COLOR_ITP_DARK_BLUE
+  BorderColor COLOR_DEFAULT_BORDER
   FontStyle bold
 }
 
 skinparam node {
-  BackgroundColor COLOR_WHITE
-  BorderColor COLOR_ITP_DARK_BLUE
+  BackgroundColor COLOR_DEFAULT_BACKGROUND
+  BorderColor COLOR_DEFAULT_BORDER
 }
 
 skinparam note {
-  BackgroundColor COLOR_ITP_YELLOW
-  BorderColor COLOR_BLACK
-  FontName FONT_FIRA_SANS
+  'BackgroundColor transparent
+  BorderColor Black
+  FontName FONT_DEFAULT
+  FontColor Black
 }
 
 skinparam package {
-  BackgroundColor COLOR_WHITE
-  BorderColor COLOR_ITP_DARK_BLUE
+  BackgroundColor COLOR_DEFAULT_BACKGROUND
+  BorderColor COLOR_DEFAULT_BORDER
 }
 
 skinparam participant {
   BackgroundColor COLOR_DEFAULT_BACKGROUND
-  BorderColor COLOR_ITP_DARK_BLUE
+  BorderColor COLOR_DEFAULT_BORDER
 }
 
 skinparam queue {
   BackgroundColor COLOR_DEFAULT_BACKGROUND
-  BorderColor COLOR_ITP_DARK_BLUE
+  BorderColor COLOR_DEFAULT_BORDER
 }
 
 skinparam rectangle {
-  BackgroundColor COLOR_WHITE
-  BorderColor COLOR_ITP_DARK_BLUE
+  BackgroundColor COLOR_DEFAULT_BACKGROUND
+  BorderColor COLOR_DEFAULT_BORDER
 }
 
 skinparam sequence {
-  DividerBackgroundColor COLOR_WHITE
-  DividerBorderColor COLOR_ITP_DARK_BLUE
+  DividerBackgroundColor COLOR_DEFAULT_BACKGROUND
+  DividerBorderColor COLOR_DEFAULT_BORDER
   DividerFontStyle bold
   GroupBackgroundColor COLOR_DEFAULT_BACKGROUND
   GroupBodyBackgroundColor COLOR_WHITE
   GroupFontStyle bold
   GroupHeaderFontStyle bold
-  LifeLineBackgroundColor COLOR_WHITE
-  LifeLineBorderColor COLOR_ITP_DARK_BLUE
+  LifeLineBackgroundColor COLOR_DEFAULT_BACKGROUND
+  LifeLineBorderColor COLOR_DEFAULT_BORDER
   ReferenceBackgroundColor COLOR_WHITE
   ReferenceHeaderBackgroundColor COLOR_DEFAULT_BACKGROUND
 }
 
 skinparam stack {
   BackgroundColor COLOR_DEFAULT_BACKGROUND
-  BorderColor COLOR_ITP_DARK_BLUE
+  BorderColor COLOR_DEFAULT_BORDER
 }
 
 skinparam state {
   BackgroundColor COLOR_DEFAULT_BACKGROUND
-  BorderColor COLOR_ITP_DARK_BLUE
-  StartColor COLOR_ITP_DARK_BLUE
-  EndColor COLOR_ITP_DARK_BLUE
+  BorderColor COLOR_DEFAULT_BORDER
+  StartColor COLOR_DEFAULT_BORDER
+  EndColor COLOR_DEFAULT_BORDER
 }
 
 skinparam storage {
   BackgroundColor COLOR_DEFAULT_BACKGROUND
-  BorderColor COLOR_ITP_DARK_BLUE
+  BorderColor COLOR_DEFAULT_BORDER
 }
 
 skinparam title {
-  FontName FONT_FIRA_SANS
+  FontName FONT_DEFAULT
   FontSize 16
 }
 
 skinparam usecase {
   BackgroundColor COLOR_DEFAULT_BACKGROUND
-  BorderColor COLOR_ITP_DARK_BLUE
+  BorderColor COLOR_DEFAULT_BORDER
 }
-
-
-
 @enduml
