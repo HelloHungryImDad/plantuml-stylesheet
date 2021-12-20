@@ -1,11 +1,10 @@
 @startuml
-
-!define COLOR_DEFAULT_BACKGROUND #transparent
-!define COLOR_DEFAULT_TEXT Black
-!define COLOR_ITP_DARK_BLUE #211551
-!define COLOR_ITP_YELLOW #FFCD00
 !define COLOR_BLACK #000000
 !define COLOR_WHITE #ffffff
+!define COLOR_ITP_DARK_BLUE #000000
+!define COLOR_ITP_YELLOW #ffffff
+!define COLOR_DEFAULT_BACKGROUND transparent
+!define COLOR_DEFAULT_TEXT Black
 
 !define FONT_FIRA_MONO Fira Mono
 !define FONT_FIRA_CODE Fira Code
