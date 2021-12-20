@@ -1,0 +1,5 @@
+@startuml
+!define COLOR_DEFAULT_BORDER White
+skinparam defaultFontColor White
+!include https://raw.githubusercontent.com/HelloHungryImDad/plantuml-stylesheet/main/style.puml
+@enduml
