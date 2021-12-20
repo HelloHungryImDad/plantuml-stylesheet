@@ -1,12 +1,4 @@
 @startuml
-!$darkMode ?= 0
-!if ($darkMode == 1)
-!define COLOR_DEFAULT_BORDER White
-skinparam defaultFontColor White
-!else
-!define COLOR_DEFAULT_BORDER Black
-skinparam defaultFontColor Black
-!endif
 !define COLOR_DEFAULT_BACKGROUND transparent
 !define FONT_DEFAULT SansSerif
 skinparam backgroundcolor transparent
